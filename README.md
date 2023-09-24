@@ -27,3 +27,31 @@ https://en.wikipedia.org/wiki/Shebang_(Unix)
 https://en.wikipedia.org/wiki/Chmod
 https://www.gitpod.io/docs/configure/workspaces
 
+
+
+### Installing AWS CLI
+
+AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting started install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+
+[AWS CLI env vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+
+We can check if our AWS credentials are configured correctly by running the following command:
+
+```sh
+aws sts get-caller-identity
+```
+
+If it's successful you should see a json payload return that looks like this:
+
+```json
+{
+    "UserId": "",
+    "Account": "",
+    "Arn": ""
+}
+
+We'll need to generate AWS CLI credits from IAM user in order to use AWS CLI
